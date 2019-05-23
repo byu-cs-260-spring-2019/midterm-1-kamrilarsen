@@ -1,0 +1,34 @@
+[debug] [2019-05-23T20:57:08.368Z] ----------------------------------------------------------------------
+[debug] [2019-05-23T20:57:08.370Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-05-23T20:57:08.371Z] CLI Version:   6.7.2
+[debug] [2019-05-23T20:57:08.371Z] Platform:      darwin
+[debug] [2019-05-23T20:57:08.371Z] Node Version:  v10.15.3
+[debug] [2019-05-23T20:57:08.372Z] Time:          Thu May 23 2019 14:57:08 GMT-0600 (Mountain Daylight Time)
+[debug] [2019-05-23T20:57:08.372Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-23T20:57:08.389Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-23T20:57:08.389Z] > authorizing via signed-in user
+[debug] [2019-05-23T20:57:08.389Z] [iam] checking project cs260projects-larsen for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-23T20:57:08.391Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cs260projects-larsen:testIamPermissions  
+
+[debug] [2019-05-23T20:57:08.773Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-23T20:57:08.776Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cs260projects-larsen  
+ 
+[debug] [2019-05-23T20:57:09.028Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'cs260projects-larsen'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-05-23T20:57:09.035Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cs260projects-larsen/versions  
+
+[debug] [2019-05-23T20:57:09.925Z] <<< HTTP RESPONSE 200
+[info] i  hosting[cs260projects-larsen]: beginning deploy...
+[info] i  hosting[cs260projects-larsen]: found 652 files in public
+[debug] [2019-05-23T20:57:10.078Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-05-23T20:57:11.550Z] [hosting] hash cache [cHVibGlj] stored for 652 files
+[debug] [2019-05-23T20:57:11.550Z] [hosting][hash queue][FINAL]
+[debug] [2019-05-23T20:57:11.551Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cs260projects-larsen/versions/c686e4a32e3724c1:populateFiles  
+ <request body omitted>
+[debug] [2019-05-23T20:57:45.357Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-23T20:57:45.359Z] [hosting][populate queue][FINAL]
+[debug] [2019-05-23T20:57:45.360Z] [hosting] uploads queued: 1

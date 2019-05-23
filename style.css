@@ -18,6 +18,10 @@ body {
     background-color: rgb(174, 228, 230);
 }
 
+.heading {
+    margin-top: 0;
+}
+
 footer {
     text-align: center;
 }
