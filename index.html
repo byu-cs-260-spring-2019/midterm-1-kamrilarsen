@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Midterm Goodreads</title>
+</head>
+
+<body>
+    <div class="row">
+        <img src="Images/Books.jpg" class="heading">
+    </div>
+    <div id="app">
+        
+        <div class="row">
+            <div class="col col-sm-8">
+                <h2 class="move">Search Books</h2>
+                <form v-on:submit.prevent="searchBook" class="move">
+                    <input type="text" v-model="searchEntry">
+                    <button type="submit">Search</button>
+                </form>
+                <div v-if="loading">
+                <p class="move">Loading...</p>
+                </div>
+
+                <div v-else>
+                    <ul>
+                        <li v-for="book in booklist">
+                            <img v-bind:src="book.imgURL"></img> 
+                            <p>{{book.title}}</p>
+                            <p>{{book.author}}</p>
+                            <p>{{book.publishDate}}</p>
+                            <button @click="makeFavorite(book)">Add to my Favorites</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-sm-4">
+                <h2>My Favorites</h2>
+                <ul>
+                    <li v-for="book in favorites">
+                        <img v-bind:src="book.imgURL" class="special"></img> 
+                        <p>{{book.title}}</p>
+                        <p>{{book.author}}</p>
+                        <p>{{book.publishDate}}</p>
+                        <button @click="unFavorite(book)">Remove from my Favorites</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer><a href="https://github.com/byu-cs-260-spring-2019/midterm-1-kamrilarsen">GitHub Repository</a></footer>
+
+    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html> 

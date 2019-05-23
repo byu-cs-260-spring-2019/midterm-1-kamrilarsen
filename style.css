@@ -1,0 +1,49 @@
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(174, 228, 230);
+}
+
+footer {
+    text-align: center;
+}
+
+img {
+    width: 15%;
+    margin-top: 15px;
+}
+
+.special {
+    width: 30%;
+}
+
+.heading {
+    height: 10em;
+    width: 100%;
+}
+
+.col-sm-8 {
+    padding: 40px;
+}
+
+.col-sm-4 {
+    padding: 40px;
+}
+
+.move {
+    padding-left: 40px;
+}
